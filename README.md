@@ -7,4 +7,25 @@ The development of NNs began in 1943, when neurophysiologist McCulloch and mathe
 
 The overall goal of this research is to get a clear methodology to predict the price of cryptocurrencies based on a NN, so that insights into buying and selling opportunities are given. In this report, the cryptocurrency prices of Bitcoin, Ethereum and XRP are predicted while minimizing the error or loss of the prediction. The trading strategy focuses solely on if there is a trading opportunity (if it is attractive to buy or sell) and not how much should be traded.
 
-The remainder of this report is structured as follows: Section Literature provides a detailed theoretical background on the methods and algorithms, Section Algorithm & Python code describes the design, implementation and tutorial of the algorithm, Section Data summarizes the used data, Section \ref{section: Results} describes the main findings and Section Conclusion & discussion summarizes insights and conclusions drawn from the results.
+The remainder of this report is structured as follows: Section Literature provides a detailed theoretical background on the methods and algorithms, Section Algorithm & Python code describes the design, implementation and tutorial of the algorithm, Section Data summarizes the used data, Section Results describes the main findings and Section Conclusion & discussion summarizes insights and conclusions drawn from the results.
+
+# Literature
+# Structure of the NN
+This Section discusses the Neural Network (NN) in general form based on Hastie, Tibshirani and Friedman (2009), Nielsen (2015) and Taddy (2019). A neural network consists, similar to a human brain,
+of several neurons. In this report a multilayer NN consists of an input layer of d normalized inputs, L hidden layers and an output layer of 1 output.
+
+\subsection{Activation function}
+\label{subsection: Activation function}
+As described in Section \ref{subsection: forward pass}, this report investigates activation functions hyperbolic tangent (\ref{equation:hyperbolic tangent}), sigmoid (\ref{equation:sigmoid}) and rectified linear unit (\ref{equation:ReLu}):
+\begin{flalign}
+\label{equation:hyperbolic tangent}
+\delta(x) = \frac{\exp{(x)}-\exp{(-x)}}{\exp{(x)}+\exp{(-x)}}  &&
+\end{flalign}
+\begin{flalign}
+\label{equation:sigmoid}
+\delta(x) = \frac{1}{1+\exp{(-x)}}  &&
+\end{flalign}
+\begin{flalign}
+\label{equation:ReLu}
+\delta(x) = \max(0,x)  &&
+\end{flalign}
